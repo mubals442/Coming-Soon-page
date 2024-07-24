@@ -12,7 +12,7 @@ function App() {
       className="bg-cover w-full h-full bg-no-repeat bg-opacity-75 bg-pantone"
       style={{ backgroundImage: `url(${back})` }}
     >
-      <div className={`bg-cover w-full h-full bg-no-repeat bg-opacity-50 bg-[url('./assets/backing.png')]`}>
+      <div className="bg-cover w-full h-full bg-no-repeat bg-[url('./assets/backing.png')] bg-opacity-50">
         <NavBar />
         <SoonMsg />
         <Media />
