@@ -11,7 +11,8 @@ export default {
       // },
       colors: {
         'backg-color': "#503C3C",
-        'brown': "#74512D"
+        'brown': "#9A6734",
+        'pantone':"#294E4A"
 
       },
     },

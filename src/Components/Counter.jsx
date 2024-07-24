@@ -45,25 +45,25 @@ function Counter() {
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": seconds }}>{seconds}</span>
         </span>
-        sec
+        ثواني
       </div>{" "}
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": minutes }}>{minutes}</span>
         </span>
-        min
+        دقيقة
       </div>
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": hours }}>{hours}</span>
         </span>
-        hours
+        ساعات
       </div>
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": days }}>{days}</span>
         </span>
-        days
+        يوم
       </div>
     </div>
   );
