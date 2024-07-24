@@ -1,67 +1,57 @@
 import React, { useState, useEffect } from "react";
 
-function Counter() {
-  const [days, setDays] = useState(8);
-  const [hours, setHours] = useState(10);
-  const [minutes, setMinutes] = useState(24);
-  const [seconds, setSeconds] = useState(8);
+function Counter({ targetDate }) {
+  const calculateTimeLeft = () => {
+    const difference = new Date(targetDate) - new Date();
+    let timeLeft = {};
 
-  // Countdown logic
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    } else {
+      timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Decrease seconds by 1
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      } else {
-        // Reset seconds and decrease minutes
-        setSeconds(59);
-        if (minutes > 0) {
-          setMinutes(minutes - 1);
-        } else {
-          // Reset minutes and decrease hours
-          setMinutes(59);
-          if (hours > 0) {
-            setHours(hours - 1);
-          } else {
-            // Reset hours and decrease days
-            setHours(23);
-            if (days > 0) {
-              setDays(days - 1);
-            } else {
-              // Countdown has reached zero, do something here
-              clearInterval(interval);
-            }
-          }
-        }
-      }
-    }, 1000); // Update every second
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [days, hours, minutes, seconds]);
+    return () => clearInterval(timer);
+  }, [targetDate]);
 
   return (
     <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": seconds }}>{seconds}</span>
+          <span style={{ "--value": timeLeft.seconds }}>{timeLeft.seconds}</span>
         </span>
         ثواني
       </div>{" "}
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": minutes }}>{minutes}</span>
+          <span style={{ "--value": timeLeft.minutes }}>{timeLeft.minutes}</span>
         </span>
         دقيقة
       </div>
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": hours }}>{hours}</span>
+          <span style={{ "--value": timeLeft.hours }}>{timeLeft.hours}</span>
         </span>
         ساعات
       </div>
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": days }}>{days}</span>
+          <span style={{ "--value": timeLeft.days }}>{timeLeft.days}</span>
         </span>
         يوم
       </div>
