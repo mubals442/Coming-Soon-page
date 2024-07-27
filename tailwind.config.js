@@ -11,10 +11,16 @@ export default {
       // },
       colors: {
         'backg-color': "#503C3C",
-        'brown': "#9A6734",
+        'brown': "#9d6b31",
         'pantone':"#294E4A"
 
       },
+      translate: {
+        '-0.25em': '-0.25em',
+      },
+      fontFamily:{
+        body:['Amiri']
+      }
     },
   },
   plugins: [
