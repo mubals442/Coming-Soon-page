@@ -13,7 +13,7 @@ function App() {
       style={{ backgroundImage: `url(${back})` }}
     >
       <div
-        className={`bg-cover w-full h-full bg-no-repeat`}
+        className={`bg-cover w-full h-full bg-no-repeat `}
         style={{ backgroundImage: `url(${aboveBack})` }}
       >
         <NavBar />
