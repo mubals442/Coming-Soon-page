@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./Components/NavBar";
 import SoonMsg from "./Components/SoonMsg";
 import Media from "./Components/Media";
 import back from "../src/assets/backgrounds.jpg";
-import aboveBack from "./assets/backing.png";
 
 function App() {
+
   return (
     <div
       dir="ltl"
