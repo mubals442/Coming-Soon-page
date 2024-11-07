@@ -31,26 +31,26 @@ function Counter({ targetDate }) {
 
   return (
     <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-5xl">
+      <div className="font-Regular flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <span className="countdown font-Regular text-5xl">
           <span style={{ "--value": timeLeft.seconds }}>{timeLeft.seconds}</span>
         </span>
-        ثواني
+        ثانية
       </div>{" "}
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-5xl">
+      <div className="font-Regular flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <span className="countdown font-Regular text-5xl">
           <span style={{ "--value": timeLeft.minutes }}>{timeLeft.minutes}</span>
         </span>
         دقيقة
       </div>
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-5xl">
+      <div className="font-Regular flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <span className="countdown font-Regular text-5xl">
           <span style={{ "--value": timeLeft.hours }}>{timeLeft.hours}</span>
         </span>
-        ساعات
+        ساعة
       </div>
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-5xl">
+      <div className="font-Regular flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+        <span className="countdown font-Regular text-5xl">
           <span style={{ "--value": timeLeft.days }}>{timeLeft.days}</span>
         </span>
         يوم
