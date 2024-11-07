@@ -2,7 +2,7 @@ import React from "react";
 
 function Email() {
   return (
-    <a href="#" className="hover:underline me-4 md:me-6 mr-2">
+    <a href="mailto:info@DRconsultancy.sa" className="hover:underline me-4 md:me-6 mr-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
@@ -19,6 +19,3 @@ function Email() {
 }
 
 export default Email;
-
-
-
