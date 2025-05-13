@@ -24,7 +24,7 @@ function SoonMsg() {
         التفاصيل تصنع الجودة...والخبرة فارق
       </p>
       <span className="">
-        <Counter targetDate={"2025-01-06T23:59:59"} />
+        <Counter targetDate={"2025-07-06T23:59:59"} />
       </span>
     </div>
   );
